@@ -105,7 +105,7 @@ export default function InventoryPage() {
       );
     }
 
-    if (item.stockQuantity <= item.lowStockThreshold) {
+    if ((item.stockQuantity || 0) <= item.lowStockThreshold) {
       return (
         <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 font-bold">
           Low: {item.stockQuantity}
