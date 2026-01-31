@@ -97,7 +97,7 @@ export default function InventoryPage() {
       );
     }
 
-    if (item.stockQuantity <= 0) {
+    if ((item.stockQuantity || 0) <= 0) {
       return (
         <span className="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800 font-bold">
           Out of Stock
